@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Evaluación Final</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></head>
+
+<body>
+<div class="container">
+	<nav class="navbar navbar-brand">
+		<div class="container-fluid">
+			<div class="navbar-dark">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+				data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand">Gestor Estudiantes</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">Operaciones</div>
+		<div class="panel-body">
+			<div class="btn-group" role="group">
+				<button type="button" id="calculoPromedio" class="btn-group"><span class="glyphicon"></span>Calcular Nota Promedio</button>
+				<button type="button" id="calculoNotaMayor" class="btn-group"><span class="glyphicon"></span>Calcular Nota Mayor</button>
+				<button type="button" id="calculoNotaMenor" class="btn-group"><span class="glyphicon"></span>Calcular Nota Menor</button>
+			</div>
+
+			<h4>Registro de Estudiante</h4>
+
+			<form>
+				<div class="form-group">
+					<label for="codigo">Código</label>
+					<input type="number" class="form-control" id="codigo" placeholder="código" min="1">
+				</div>
+				<div class="form-group">
+					<label for="nombre">Nombre</label>
+					<input type="text" class="form-control" id="nombre" placeholder="nombre">
+				</div>
+				<div class="form-group">
+					<label for="nota">Nota</label>
+					<input type="number" class="form-control" id="nota" placeholder="nota" min="0" max="10">
+				</div>
+				<button type="button" class="btn btn-success" id="registroEstudiante">Registrar Estudiante</button>
+			</form>
+
+			<h4>Estudiantes Registrados</h4>
+
+			<table class="table table-light">
+				<thead>
+				<tr>
+					<th>Código</th>
+					<th>Nombre</th>
+					<th>Nota</th>
+				</tr>	
+				</thead>
+				<tbody id="notas"></tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</body>
+<script src="js/app.js"></script>
+</html>
